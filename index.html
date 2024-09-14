@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RecipeCart</title>
+</head>
+<body>
+
+        <!-- ...................Hero Section...................... -->
+        <section class="hero">
+                <div class="container">
+                    <h1 class="logo">RecipeCart</h1>
+                <nav>
+                    <div class="menu-icon">&#9776;</div>
+                    <ul class="nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                </div>
+                
+            <div class="hero-section">
+                <h2>Welcome to our Recipe Collection!</h2>
+                <p>Craving Something Delicious? Find Recipes and Ingredients at Your Fingertips..</p>
+    
+                <form action="search.html" class="search-box" id="searchForm">
+                    <input class="search-input" type="text" placeholder="Search your recipe.." name="search" autofocus>
+                    <button class="search-btn" type="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="button-container">
+                <p>What type of food do you want to Explore?</p>
+                <button class="veg-button" onclick="scrollToSection('recipes-veg')"> </button>
+                <button class="nonveg-button" onclick="scrollToSection('recipes-Non-veg')"> </button>
+            </div>
+        </div>
+        </section>
+        
+        
+        <!-- ...................Recipe Section...................... -->
+        <section class="recipes-veg">
+            <h1>Featured Veg Recipes</h1>
+            <div class="recipe-section">
+                <div class="recipe-card">
+                    <img src="images/v-1.jpg" alt="">
+                    <h2>Matar Paneer </h2>
+                    <p>Deliciously cooked in a rich and creamy tomato-based gravy.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Matar Paneer">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/v2.jpg" alt="">
+                    <h2>Margherita Pizza </h2>
+                    <p> A classic pizza topped with mozzarella, tomatoes, and basil.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Pizza Express Margherita">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/v3.jpg" alt="">
+                    <h2>Pancakes</h2>
+                    <p>A fluffy, flat cake madeup of simple batter, served with butter and syrup.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Pancakes">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/v-4.jpg" alt="">
+                    <h2>Dal Fry</h2>
+                    <p>Cooked with spices and topped with a ghee and garlic.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Dal Fry">View Recipe</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipes-Non-veg">
+            <h1>Featured Non-Veg Recipes</h1>
+            <div class="recipe-section">
+                <div class="recipe-card">
+                    <img src="images/nv1.jpg" alt="">
+                    <h2>Tandoori chicken</h2>
+                    <p>Creamy and rich chicken cooked with butter and cream.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Tandoori chicken">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/nv-2.jpg" alt="">
+                    <h2>Chicken Biryani</h2>
+                    <p>Aromatic rice dish with spiced chicken and fragrant herbs.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Lamb Biryani">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/nv-1.jpg" alt="">
+                    <h2>Chicken Handi</h2>
+                    <p>Succulent pieces of meat simmered in a spiced gravy.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Chicken Handi">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/nv-4.jpg" alt="">
+                    <h2>Fish Fry</h2>
+                    <p>Flaky fish cooked in a spicy and tangy curry sauce.</p>
+                    <a href="#" class="view-recipe-btn" data-id="Recheado Masala Fish">View Recipe</a>
+                </div>
+            </div>
+        </section>
+        
+        <script src="script.js"></script>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>Created by: Abhinil Rajgire</h3>
+            <p>Contact No: +08530460708</p>
+            <p>Email: abhinilrajgire1702@gmail.com</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>

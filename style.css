@@ -1,0 +1,343 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-list{
+    display:none;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
+    font-weight: 550;
+}
+
+
+/* .................................................... */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/food-4k-1.jpg) center/cover no-repeat;
+    filter: brightness(0.5); /* Darken the background image */
+    z-index: -1; /* Ensure the background stays behind the content */
+}
+
+.hero * {
+    position: relative;
+    z-index: 1; /* Ensure the content stays above the background */
+}
+
+
+.hero h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+
+}
+
+.hero p{
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.container{
+    color:#fff;
+    width: 95%;
+    margin : 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.search-box{
+    max-width: 550px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.search-box input {
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 20px 0 0 20px;
+    font-size: 1rem;
+    border: 1px solid rgb(43, 31, 31);
+}
+
+.search-box button{
+    padding: 10px 20px;
+    outline: none;
+    border: 0;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 1rem;
+    background: red;
+    color:#fff;
+    cursor: pointer;
+    border: 1px solid red;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search-box button:hover{
+    background: rgb(236, 102, 102);
+}
+
+
+.button-container {
+    margin-top: 20px;
+    
+}
+
+.button-container p{
+    font-size: 15px;
+    
+}
+
+.button-container button {
+    border: none;
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+}
+
+.button-container .veg-button {
+    border-radius: 5px;
+    background-image: url('images/veg.jpg');
+}
+
+.button-container .nonveg-button {
+    border-radius: 5px;
+    background-image: url('images/nveg.jpg');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ...................Recipe Section......................*/
+
+
+.recipes-veg{
+    padding: 50px 0;
+}
+
+.recipes-veg h1{
+    text-align: center;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.recipes-Non-veg{
+    padding: 50px 0;
+}
+
+.recipes-Non-veg h1{
+    text-align: center;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.recipe-section{
+    width:90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    column-gap: 10px;
+}
+
+.recipe-card{
+    background: #fff;
+    margin: 30px 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px gray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to create a highlight effect */
+    border-color: black; /* Optional: Change border color on hover */
+}
+
+.recipe-card img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.recipe-card h2{
+    font-size:22px;
+    padding:10px;
+}
+
+.recipe-card p{
+    font-size:15px;
+    padding:10px;
+}
+
+.recipe-card a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+footer{
+    background: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.menu-icon{
+    font-size: 24px;
+    padding:20px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+}
+
+
+/* ...................Media Query........................ */
+@media only screen and (min-width: 768px){
+    .menu-icon{
+        display: none;
+    }
+    .nav-list{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .hero h2{
+        font-size: 28px;
+    }
+    .hero p{
+        font-size: 15px;
+    }
+}
+
+/* ......................Footer.................................. */
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px; /* Ensures columns don't get too narrow */
+}
+
+
+.footer-info p {
+    font-size: 13px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.footer-links a,
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    text-decoration: underline;
+}
